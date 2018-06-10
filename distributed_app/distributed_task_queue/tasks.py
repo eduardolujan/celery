@@ -3,13 +3,14 @@
 
 
 from __future__ import absolute_import, unicode_literals
-from .celery import app
+from .celery_app_setup import app
 
 @app.task
-def prueba_suma(x, y):
+def celery_task_sum(x, y):
+    print('El resultado es {}'.format(x+y))
     return x + y
 
 
 @app.task
-def prueba_resta(x, y):
+def celery_task_rest(x, y):
     return x - y

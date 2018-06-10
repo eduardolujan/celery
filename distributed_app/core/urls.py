@@ -5,5 +5,6 @@ from django.conf.urls import url
 from .views import *
 
 urlpatterns = [
-    url('^sum/<int:a>/<int:b>$', testsum, name='testsum')
+    url(r'^suma/(?P<a>\d+)/(?P<b>\d+)/?$', testsum),
+    url(r'^test/?$', test)
 ]

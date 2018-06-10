@@ -4,6 +4,9 @@
 from __future__ import absolute_import, unicode_literals
 import os
 from celery import Celery
+# from celery import current_app
+# current_app.conf.CELERY_ALWAYS_EAGER = True
+# current_app.conf.CELERY_EAGER_PROPAGATES_EXCEPTIONS = True
 
 # set the default Django settings module for the 'celery' program.
 try:
